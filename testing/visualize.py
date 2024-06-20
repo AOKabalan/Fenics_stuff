@@ -6,7 +6,6 @@ from dolfin import *
 
 from dolfin import *
 mesh = Mesh()
-mvc = MeshValueCollection("size_t", mesh, mesh.topology().dim())
 with XDMFFile("mesh.xdmf") as infile:
    infile.read(mesh)
    infile.read(mvc, "name_to_read")
